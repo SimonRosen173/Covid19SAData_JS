@@ -66,8 +66,6 @@ function set_summary_table(data) {
     // console.log(data);
 }
 
-load_set_summary_data();
-
 function createLineCharts(){
     // ALL CUMULATIVE DATA
     Plotly.d3.csv(data_base_url + "sa/all_cum_data.csv", function(raw_data) {
@@ -120,4 +118,14 @@ function createLineCharts(){
     });
 }
 
-createLineCharts();
+
+function main(){
+    // console.log("Plotly loaded and main run");
+    load_set_summary_data();
+    createLineCharts();
+}
+
+window.onload = function (){
+    $.getScript('js/plotly-latest.min.js', function(){main();});
+};
+
