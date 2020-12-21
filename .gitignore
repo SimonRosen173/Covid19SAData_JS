@@ -1,0 +1,9 @@
+.idea/*
+*/.idea/*
+.ipynb_checkpoints/*
+Gemfile.lock
+_site
+Gemfile
+venv/*
+__pycache__/*
+*/__pycache__/*
