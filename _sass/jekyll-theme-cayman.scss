@@ -131,6 +131,24 @@ a {
   }
 }
 
+.line-graph {
+  //width: 80vw;
+  //height: 30vw;
+  @media screen and (orientation: portrait) {
+    height: 90vw;
+  }
+  @media screen and (orientation: landscape) {
+    height: 70vh;
+  }
+
+  //@include large {
+  //  height: 50vh;
+  //}
+  //@include small {
+  //  height: 60vh;
+  //}
+}
+
 // --------
 //  iFrame
 
@@ -243,7 +261,7 @@ iframe {
 
   @include large {
     //background-color: #000000;
-    max-width: 64rem;
+    //max-width: 64rem;
     padding: 2rem 6rem; // was 6
     margin: 0 auto;
     font-size: 1.1rem;

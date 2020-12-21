@@ -82,7 +82,7 @@ function createLineCharts(){
             'Date', 'Cumulative No of Active Cases', ['Active'],['firebrick']);
         // Ratio of positive cases to tests conducted
         makeLineChart(all_cum_data, "cumCasesTestsRatioLineGraphDiv", "date", ['confirmed_div_by_tests'],
-            'Date', 'Ratio of Confirmed Cases to Tests Conducted', ['Confirmed Cases : Tests'],['firebrick']);
+            'Date', 'Ratio', ['Confirmed Cases : Tests'],['firebrick']);
         // Recoveries & Deaths
         makeLineChart(all_cum_data, "cumRecoveriesDeathsLineGraphDiv", "date", ['recovered', 'deaths'],
             'Date', 'Cumulative No', ['Recoveries','Deaths'],['green','black']);

@@ -73,86 +73,33 @@ values between the two dates and total corresponds to the latest date.
 <br>
 \** The sources used for calculating active cases is the same as that for cases, recoveries and deaths.
 
-<!--<div>
-<table class = "centred">
-    <thead>
-        <tr class="header">
-            <th></th>
-            <th>Cases</th>
-            <th>Active Cases</th>
-            <th>Tests</th>
-            <th>Recoveries</th>
-            <th>Deaths</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="index">Total</td>
-            <td id = "tot_cases_td"></td>
-            <td id = "tot_active_td"></td>
-            <td id = "tot_tests_td"></td>
-            <td id = "tot_recoveries_td"></td>
-            <td id = "tot_deaths_td"></td>
-        </tr>
-        <tr>
-            <td class="index">Change</td>
-            <td id = "change_cases_td"></td>
-            <td id = "change_active_td"></td>
-            <td id = "change_tests_td"></td>
-            <td id = "change_recoveries_td"></td>
-            <td id = "change_deaths_td"></td>
-        </tr>
-    </tbody>
-</table>
-</div>-->
-
-<!--
-# Total Cases & Tests
-**630 595 Cases (+2 336 change) | 3 726 721 Tested (+21 313 change)**
-<br><br>
-
-___
-
-<br>
-
-# Total Deaths & Recoveries
-**14 389 Deaths (+126 change) | 553 456 Recoveries (+3 463 change)** 
-<br><br>
-
-___
-
-### Total Deaths & Recoveries
-<div class="iframeDiv" align="center">
-    <iframe class="lazy pieChart" data-src="tot_recovered_deaths.html" scrolling="no" frameborder="0"></iframe>
-</div>-->
-
 # Testing & Cases Over Time
 ___
 ## Cumulative
 ### Date vs Cumulative No of Tests & Positive Cases 
-<div id = "cumCasesTestsLineGraphDiv"></div>
+<div class = "line-graph" id = "cumCasesTestsLineGraphDiv"></div>
 
 ### Date vs Cumulative No of Positive Cases
-<div id = "cumCasesLineGraphDiv"></div>
+<div class = "line-graph" id = "cumCasesLineGraphDiv"></div>
 [What “flattening the curve” means and why it’s so important.](https://sacoronavirus.co.za/2020/03/22/what-flattening-the-curve-means-and-why-its-so-important/) - COVID-19 Corona Virus South African Resource Portal
 
 ### Date vs Cumulative No of Active Cases
 Active cases are cases where there has not yet been an outcome. I.e. confirmed cases - recoveries - deaths.
-<div id = "cumActiveLineGraphDiv"></div>
+<div class = "line-graph" id = "cumActiveLineGraphDiv"></div>
 
 ### Date vs Ratio of Positive Cases To Test Conducted
 i.e. positive cases divided by tests conducted. 
-<div id = "cumCasesTestsRatioLineGraphDiv"></div>
+<div class = "line-graph" id = "cumCasesTestsRatioLineGraphDiv"></div>
 
 ## Daily Change
 ### Date vs Daily Change in Positive Cases & Tests
-<div id = "dailyCasesTestsLineGraphDiv"></div>
+<div class = "line-graph" id = "dailyCasesTestsLineGraphDiv"></div>
 
 ### Date vs Daily Change in Positive Cases
-<div id = "dailyCasesLineGraphDiv"></div>
+<div class = "line-graph" id = "dailyCasesLineGraphDiv"></div>
 
 ### Date vs Daily Change in Active Cases
-<div id = "dailyActiveLineGraphDiv"></div>
+<div class = "line-graph" id = "dailyActiveLineGraphDiv"></div>
 
 <!--
 ### Date vs No of Tests Per Day
@@ -172,27 +119,27 @@ UNK - Unkown -->
 ___
 ## Cumulative
 ### Date vs Cumulative No of Recoveries & Deaths
-<div id = "cumRecoveriesDeathsLineGraphDiv"></div>
+<div class = "line-graph" id = "cumRecoveriesDeathsLineGraphDiv"></div>
 
 ### Date vs Cumulative No of Deaths
-<div id = "cumDeathsLineGraphDiv"></div>
+<div class = "line-graph" id = "cumDeathsLineGraphDiv"></div>
 
 ### Date vs Ratio of Deaths & Recoveries To Confirmed Cases
 i.e. deaths divided by confirmed cases and recoveries divided by confirmed cases. 
-<div id = "cumDeathsRecoveriesCasesRatioLineGraphDiv"></div>
+<div class = "line-graph" id = "cumDeathsRecoveriesCasesRatioLineGraphDiv"></div>
 
 ## Daily Change
 ### Date vs Daily Change in Recoveries & Deaths
 <!--<div class="iframeDiv" align="center">
     <iframe class="lazy" data-src="daily_deaths_recovered.html" scrolling="no" frameborder="0"></iframe>
 </div>-->
-<div id = "dailyRecoveriesDeathsLineGraphDiv"></div>
+<div class = "line-graph" id = "dailyRecoveriesDeathsLineGraphDiv"></div>
 
 ### Date vs Daily Change in Deaths
 <!--<div class="iframeDiv" align="center">
     <iframe class="lazy" data-src="daily_deaths.html" scrolling="no" frameborder="0"></iframe>
 </div>-->
-<div id = "dailyDeathsLineGraphDiv"></div>
+<div class = "line-graph" id = "dailyDeathsLineGraphDiv"></div>
 
 <!--
 <br>
