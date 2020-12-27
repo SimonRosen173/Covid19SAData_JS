@@ -126,6 +126,7 @@ function main(){
 }
 
 window.onload = function (){
-    $.getScript('js/plotly-latest.min.js', function(){main();});
+    // $.getScript('js/plotly-latest.min.js', function(){main();});
+    $.getScript('js/libs/plotly-basic.min.js', function(){main();});
 };
 

@@ -2,13 +2,18 @@
 <!--{% if site.google_analytics %}-->
 <!--  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>-->
 
-  <!--Exclude known bots from google analytics. Taken from https://github.com/MohamedBassem/spam-referrals-blocker-->
-  <script src="https://github.com/MohamedBassem/spam-referrals-blocker/releases/download/v0.2/spam-referrals-blocker.min.js"></script>
+<!--Exclude known bots from google analytics. Taken from https://github.com/MohamedBassem/spam-referrals-blocker-->
+<!--  <script src="https://github.com/MohamedBassem/spam-referrals-blocker/releases/download/v0.2/spam-referrals-blocker.min.js"></script>-->
+<script src="js/libs/spam-referrals-blocker.min.js"></script>
+
+
 <!--  <script src = "https://cdn.plot.ly/plotly-latest.min.js"></script>-->
 <!--  <script src = "js/plotly-latest.min.js"></script>-->
-<script src = "js/jquery-3.5.1.min.js"></script>
+
+<script src = "js/libs/jquery-3.5.1.min.js"></script>
 
   <script>
+    // Google Analytics
     // if( !isSpamReferral()){
     //   window.dataLayer = window.dataLayer || [];
     //   function gtag(){dataLayer.push(arguments);}
