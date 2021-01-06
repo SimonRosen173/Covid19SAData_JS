@@ -12,6 +12,9 @@ ___
 
 <br>
 These charts are all interactive. Mouse over an aspect of the chart to see more info, or if you are on mobile tap.
+<br>
+
+**Note: Breaks in histograms are as a result of data not being available for those days.**
 
 # Summary
 ___
@@ -73,6 +76,16 @@ values between the two dates and total corresponds to the latest date.
 <br>
 \** The sources used for calculating active cases is the same as that for cases, recoveries and deaths.
 
+# Configuration
+___
+#### Daily Data Type
+<input type="radio" id="default_rb" name="daily_data_type" value="default" onchange="dailyDataTypeRBChanged(this);" checked='true'>
+<label for="default_rb">Default</label><br>
+<input type="radio" id="rol_avg_3_rb" name="daily_data_type" value="rol_avg_3" onchange="dailyDataTypeRBChanged(this);">
+<label for="rol_avg_3_rb">3 day rolling average</label><br>
+<input type="radio" id="rol_avg_7_rb" name="daily_data_type" value="rol_avg_7" onchange="dailyDataTypeRBChanged(this);">
+<label for="rol_avg_7_rb">7 day rolling average</label>
+
 # Testing & Cases Over Time
 ___
 ## Cumulative
@@ -91,6 +104,11 @@ Active cases are cases where there has not yet been an outcome. I.e. confirmed c
 i.e. positive cases divided by tests conducted. 
 <div class = "line-graph" id = "cumCasesTestsRatioLineGraphDiv"></div>
 
+<!--
+##############
+ DAILY CHANGE
+##############
+-->
 ## Daily Change
 ### Date vs Daily Change in Positive Cases & Tests
 <div class = "line-graph" id = "dailyCasesTestsLineGraphDiv"></div>

@@ -52,6 +52,31 @@ function toFormattedDict(raw_data){
     return data;
 }
 
+// key_col_name - column where key resides, key - value of key, val_col_name - column where val resides
+function getValFromFormattedDict(data, key_col_name, key, val_col_name){
+    var key_col_vals = data[key_col_name];
+    var val_col_vals = data[val_col_name];
+
+    for (var i =0; i<key_col_vals.length; i++){
+        if (key_col_vals[i] === key){
+            return val_col_vals[i];
+        }
+    }
+}
+
+function formatVal(value, include_sign){
+    var formatted_val;
+    var is_pos = value >= 0;
+
+    formatted_val = parseFloat(value).toLocaleString('en');
+    formatted_val = formatted_val.replace(/,/g, ' ');
+
+    if (include_sign && is_pos){
+        formatted_val = "+" + (formatted_val);
+    }
+    return formatted_val;
+}
+
 function createPieChart(csv_name, col_name, div_name){
     Plotly.d3.csv(data_base_url + csv_name, function(data){ makePieChart(data, col_name, div_name)});
 }
