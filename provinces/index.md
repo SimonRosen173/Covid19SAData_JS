@@ -11,8 +11,11 @@ last_updated: 10:56 03 September 2020
 # Summary
 ___
 
+<!--
 **Note: Click on an underlined province name to be taken to a page specific to that province.**
+-->
 
+<!--
 <table>
 <thead>
 	<tr class="header">
@@ -126,7 +129,7 @@ ___
 		<td class="total" markdown="span">+126</td>
 	</tr>
 </tbody>
-</table>
+</table> -->
 Negative values in the "New" columns indicate that the total of that value for the specified province went down from the previous
 day. This is due to the numbers being adjusted by government and moved to the totals of other provinces or mistakes in the reporting by government.
 
@@ -135,14 +138,19 @@ day. This is due to the numbers being adjusted by government and moved to the to
 ___
 
 ### Total Cases Per Province
-<div class="iframeDiv" align="center">
+
+<div class = "" id = "totCasesPerProvPieChartDiv"></div>
+
+<!--<div class="iframeDiv" align="center">
     <iframe class="lazy pieChart" data-src="tot_cases_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>
+</div>-->
 
 ### Latest Change in Cases Per Province
-<div class="iframeDiv" align="center">
+<!--<div class="iframeDiv" align="center">
     <iframe class="lazy pieChart" data-src="latest_change_cases_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>
+</div>-->
+
+<div class = "" id = "latestChangeCasesPerProvPieChartDiv"></div>
 
 # Total Tests
 ___
@@ -288,4 +296,7 @@ ___
 </table>
 
 {% include_relative _includes/footer.md %}
+
+<script src = "../js/graphs.js"></script>
+<script src = "../js/provincial.js"></script>
 

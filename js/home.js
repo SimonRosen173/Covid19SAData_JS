@@ -59,6 +59,23 @@ function setSummaryTable(data) {
     var id_list = ['tot','change','last_date','second_last_date'];
     var val_name_list = ['confirmed','active','tests','recoveries','deaths'];
 
+    // Change Interval
+    var change_interval_el = document.getElementById("summary_tbl_interval");
+    // var change_interval_second_el = document.getElementById("");
+
+    // Sources
+    // summary_tbl_sources
+    var source_cell_id = "summary_tbl_sources";
+    var source_urls_arr = data['sources_'+val_name_list[0]].split(',');
+    var source_a_ids = [];
+    for (var j = 0; j<source_urls_arr.length; j++){
+        source_a_ids.push("sources_"+ val_name_list[0] +"_a_"+(j+1));
+        createHyperlink(source_cell_id, source_a_ids[j],"["+(j+1)+"]", source_urls_arr[j], true);
+    }
+
+    change_interval_el.innerText = data['second_last_date_'+val_name_list[0]] +  " - "
+        + data['last_date_'+val_name_list[0]];
+
     for (var i = 0; i<val_name_list.length; i++){
         // Total Value
         var curr_tot_el = document.getElementById("tot_"+val_name_list[i]+"_td");
@@ -69,20 +86,20 @@ function setSummaryTable(data) {
         curr_change_el.innerText = formatVal(data['change_'+val_name_list[i]],true);
 
         // Change interval
-        var change_interval = document.getElementById("change_interval_"+val_name_list[i]+"_td");
-        change_interval.innerText = data['second_last_date_'+val_name_list[i]] +  " - "
-            + data['last_date_'+val_name_list[i]];
+        // var change_interval = document.getElementById("change_interval_"+val_name_list[i]+"_td");
+        // change_interval.innerText = data['second_last_date_'+val_name_list[i]] +  " - "
+        //     + data['last_date_'+val_name_list[i]];
 
         // Sources
-        if (val_name_list[i] !== 'active'){
-            var source_cell_id = "sources_"+ val_name_list[i] +"_td";
-            var source_urls_arr = data['sources_'+val_name_list[i]].split(',');
-            var source_a_ids = [];
-            for (var j = 0; j<source_urls_arr.length; j++){
-                source_a_ids.push("sources_"+ val_name_list[i] +"_a_"+(j+1));
-                createHyperlink(source_cell_id, source_a_ids[j],"["+(j+1)+"]", source_urls_arr[j], true);
-            }
-        }
+        // if (val_name_list[i] !== 'active'){
+        //     var source_cell_id = "sources_"+ val_name_list[i] +"_td";
+        //     var source_urls_arr = data['sources_'+val_name_list[i]].split(',');
+        //     var source_a_ids = [];
+        //     for (var j = 0; j<source_urls_arr.length; j++){
+        //         source_a_ids.push("sources_"+ val_name_list[i] +"_a_"+(j+1));
+        //         createHyperlink(source_cell_id, source_a_ids[j],"["+(j+1)+"]", source_urls_arr[j], true);
+        //     }
+        // }
     }
     // console.log(data);
 }
@@ -208,7 +225,7 @@ function main(){
     // load_set_summary_data();
     // createLineCharts();
     loadData();
-    console.log(formatVal(10000, true));
+    // console.log(formatVal(10000, true));
 }
 
 function dailyDataTypeRBChanged(el){

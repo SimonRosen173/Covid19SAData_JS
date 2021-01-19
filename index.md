@@ -17,6 +17,12 @@ These charts are all interactive. Mouse over an aspect of the chart to see more 
 **Note: Breaks in histograms are as a result of data not being available for those days.**
 
 # Summary
+<div><div id="summary_tbl_interval" class = "gradient-cell">... - ...</div></div>
+<p style="margin-top: 0.1rem;">
+These dates specify the dates to which the data corresponds to, i.e. change is calculated using the difference of the 
+values between the two dates and total corresponds to the latest date.
+</p>
+
 ___
 
 <!--| | Total | Change | Interval of Change | Sources | -->
@@ -28,54 +34,38 @@ ___
                 <th></th>
                 <th>Total</th>
                 <th>Change</th>
-                <th>Dates*</th>
-                <th>Sources</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td class="index">Cases</td>
-                <td id = "tot_confirmed_td" class="bold"></td>
-                <td id = "change_confirmed_td" class="bold"></td>
-                <td id = "change_interval_confirmed_td"></td>
-                <td id = "sources_confirmed_td"></td>
+                <td id = "tot_confirmed_td" class="bold">   ...   </td>
+                <td id = "change_confirmed_td" class="bold">   ...   </td>
             </tr>
             <tr>
                 <td class="index">Active Cases</td>
-                <td id = "tot_active_td" class="bold"></td>
-                <td id = "change_active_td" class="bold"></td>
-                <td id = "change_interval_active_td"></td>
-                <td id = "sources_active_td">**</td>
+                <td id = "tot_active_td" class="bold">   ...   </td>
+                <td id = "change_active_td" class="bold">   ...   </td>
             </tr>
             <tr>
                 <td class="index">Tests</td>
-                <td id = "tot_tests_td" class="bold"></td>
-                <td id = "change_tests_td" class="bold"></td>
-                <td id = "change_interval_tests_td"></td>
-                <td id = "sources_tests_td"></td>
+                <td id = "tot_tests_td" class="bold">   ...   </td>
+                <td id = "change_tests_td" class="bold">   ...   </td>
             </tr>
             <tr>
                 <td class="index">Recoveries</td>
-                <td id = "tot_recoveries_td" class="bold"></td>
-                <td id = "change_recoveries_td" class="bold"></td>
-                <td id = "change_interval_recoveries_td"></td>
-                <td id = "sources_recoveries_td"></td>
+                <td id = "tot_recoveries_td" class="bold">   ...   </td>
+                <td id = "change_recoveries_td" class="bold">   ...   </td>
             </tr>
             <tr>
                 <td class="index">Deaths</td>
-                <td id = "tot_deaths_td" class="bold"></td>
-                <td id = "change_deaths_td" class="bold"></td>
-                <td id = "change_interval_deaths_td"></td>
-                <td id = "sources_deaths_td"></td>
+                <td id = "tot_deaths_td" class="bold">   ...   </td>
+                <td id = "change_deaths_td" class="bold">   ...   </td>
             </tr>
         </tbody>
     </table>
 </div>
-\* Dates specifies the dates to which the data corresponds to, i.e. change is calculated using the difference of the 
-values between the two dates and total corresponds to the latest date.
-<br>
-\** The sources used for calculating active cases is the same as that for cases, recoveries and deaths.
-
+<div style="padding-top: 0.6rem; padding-bottom: 0.1rem;"><strong>Sources:</strong> <div class="inline-div" id="summary_tbl_sources"></div></div>
 # Configuration
 ___
 #### Daily Data Type
