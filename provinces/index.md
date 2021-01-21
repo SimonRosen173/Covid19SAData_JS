@@ -6,7 +6,7 @@ author: Simon Rosen
 last_updated: 10:56 03 September 2020
 ---
 
-<center><a href="/" class="btn alt_btn_col">Home</a></center>
+<center><a href="/" id = "home_page_btn" class="btn alt_btn_col">Home</a></center>
 
 # Summary
 ___

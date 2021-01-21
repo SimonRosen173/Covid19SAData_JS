@@ -97,5 +97,11 @@ function main(){
 
 window.onload = function (){
     // $.getScript('js/plotly-latest.min.js', function(){main();});
+    if (window.location.hostname === "simonrosen173.github.io"){
+        //prov_page_btn
+        let home_page_btn_el = document.getElementById("home_page_btn");
+        home_page_btn_el.href = "/Covid19SAData_JS/";
+    }
+
     $.getScript('../js/libs/plotly-basic.min.js', function(){main();});
 };

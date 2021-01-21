@@ -226,13 +226,6 @@ function main(){
     // load_set_summary_data();
     // createLineCharts();
     loadData();
-
-    // Needs to be done while using GitHub pages base url
-    if (window.location.hostname === "simonrosen173.github.io"){
-        //prov_page_btn
-        let prov_page_btn_el = document.getElementById("prov_page_btn");
-        prov_page_btn_el.href = "/Covid19SAData_JS/provinces/";
-    }
     // console.log(formatVal(10000, true));
 }
 
@@ -243,6 +236,12 @@ function dailyDataTypeRBChanged(el){
 }
 
 window.onload = function (){
-    // $.getScript('js/plotly-latest.min.js', function(){main();});
+    // Needs to be done while using GitHub pages base url
+    if (window.location.hostname === "simonrosen173.github.io"){
+        //prov_page_btn
+        let prov_page_btn_el = document.getElementById("prov_page_btn");
+        prov_page_btn_el.href = "/Covid19SAData_JS/provinces/";
+    }
+
     $.getScript('js/libs/plotly-basic.min.js', function(){main();});
 };
