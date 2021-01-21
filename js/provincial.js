@@ -1,4 +1,16 @@
-data_base_url = 'https://raw.githubusercontent.com/SimonRosen173/Covid19SAData_Data/master/data/';
+var is_dev = (location.hostname === "localhost" || location.hostname === "127.0.0.1");
+console.log("is_dev: " + is_dev);
+
+var data_base_url = '';
+
+// Use local files if being run locally - i.e. in dev
+if (!is_dev) {
+    data_base_url = 'https://raw.githubusercontent.com/SimonRosen173/Covid19SAData_Data/master/data/';
+} else {
+    data_base_url = '../test_data/'; // local files not shown in repo
+}
+
+// data_base_url = 'https://raw.githubusercontent.com/SimonRosen173/Covid19SAData_Data/master/data/';
 
 function createProvPieCharts(){
     // Cases per prov
@@ -17,14 +29,64 @@ function createProvPieCharts(){
     // createPieChart("provincial/tot_deaths_provinces.csv", 'latest_change', 'latestChangeDeathsPerProvDiv');
 }
 
+function setSummaryTable(data){
+    let prov_map = { /* Indexes */
+        "Eastern Cape": "ec",
+        "Free State": "fs",
+        "Gauteng": "gp",
+        "KwaZulu-Natal": "kzn",
+        "Limpopo": "lp",
+        "Mpumalanga": "mp",
+        "North West": "nw",
+        "Northern Cape": "nc",
+        "Western Cape": "wc",
+        "Unknown": "unk",
+        "Total": "sa"
+    }
+
+    let val_ids = ["tot_confirmed", "change_confirmed", "tot_recoveries", "change_recoveries",
+        "tot_deaths", "change_deaths","tot_active", "change_active"];
+
+    for (let i = 0; i<data['Province'].length; i++){
+        let curr_prov = prov_map[data['Province'][i]];
+        for (let j = 0; j<val_ids.length; j++){
+            let curr_cell_el = document.getElementById(val_ids[j]+"_"+curr_prov+"_td");
+
+            let include_sign = val_ids[j].includes("change");
+            curr_cell_el.innerText = formatVal(data[val_ids[j]][i],include_sign);
+        }
+    }
+}
+
 function loadData(){
-    // Summary
-    // CASES DATA
+    // SUMMARY
+    Plotly.d3.csv(data_base_url + "provincial/prov_summary.csv", function(raw_data) {
+        // console.log(raw_data);
+        let prov_summary_data = toFormattedDict(raw_data);
+        // console.log(prov_summary_data);
+        setSummaryTable(prov_summary_data);
+    });
+
+    // TOTALS
+    // Cases
     Plotly.d3.csv(data_base_url + "provincial/tot_provinces.csv", function(raw_data) {
         // let prov_cases_data = raw_data;
         makePieChart(raw_data, 'total', 'totCasesPerProvPieChartDiv');
-        //
+        makePieChart(raw_data, 'latest_change', 'changeCasesPerProvPieChartDiv');
     });
+    // Deaths
+    Plotly.d3.csv(data_base_url + "provincial/tot_deaths_provinces.csv", function(raw_data) {
+        // let prov_cases_data = raw_data;
+        makePieChart(raw_data, 'total', 'totDeathsPerProvPieChartDiv');
+        makePieChart(raw_data, 'latest_change', 'changeDeathsPerProvPieChartDiv');
+    });
+    // Recoveries
+    Plotly.d3.csv(data_base_url + "provincial/tot_recovered_provinces.csv", function(raw_data) {
+        // let prov_cases_data = raw_data;
+        makePieChart(raw_data, 'total', 'totRecoveriesPerProvPieChartDiv');
+        makePieChart(raw_data, 'latest_change', 'changeRecoveriesPerProvPieChartDiv');
+    });
+
 }
 
 function main(){

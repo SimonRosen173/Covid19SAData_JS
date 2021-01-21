@@ -188,8 +188,8 @@ function loadData(){
     // Data Info
     Plotly.d3.csv(data_base_url + "data_info.csv", function(raw_data) {
         data_info = toFormattedDict(raw_data);
-        console.log(data_info);
-        console.log(raw_data);
+        // console.log(data_info);
+        // console.log(raw_data);
         var sa_last_updated_val = getValFromFormattedDict(data_info, "name",
             "sa_page_updated", "date_updated");
         var last_updated_val_el = document.getElementById("last_updated_val");
@@ -198,6 +198,7 @@ function loadData(){
 
     // Gen Data
     Plotly.d3.csv(data_base_url + "sa/gen_data.csv", function(raw_data) {
+        console.log(raw_data);
         gen_data = raw_data[0];
         setSummaryTable(gen_data);
     });
@@ -225,6 +226,13 @@ function main(){
     // load_set_summary_data();
     // createLineCharts();
     loadData();
+
+    // Needs to be done while using GitHub pages base url
+    if (window.location.hostname === "simonrosen173.github.io"){
+        //prov_page_btn
+        let prov_page_btn_el = document.getElementById("prov_page_btn");
+        prov_page_btn_el.href = "/Covid19SAData_JS/provinces/";
+    }
     // console.log(formatVal(10000, true));
 }
 

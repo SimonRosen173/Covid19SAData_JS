@@ -5,7 +5,7 @@ description: South African Covid-19 data & visualisations. <br>Contains data for
 author: Simon Rosen
 last_updated: 10:56 03 September 2020
 ---
-<center><a href="/provinces" class="btn alt_btn_col">Data Per Province Page</a></center> 
+<center><a href="/provinces" id="prov_page_btn" class="btn alt_btn_col">Data Per Province Page</a></center> 
 Click the above button to be taken to a page showing Covid-19 data per province. 
 
 ___
@@ -17,7 +17,7 @@ These charts are all interactive. Mouse over an aspect of the chart to see more 
 **Note: Breaks in histograms are as a result of data not being available for those days.**
 
 # Summary
-<div><div id="summary_tbl_interval" class = "gradient-cell">... - ...</div></div>
+<div><div id="summary_tbl_interval" class = "date-cell">... - ...</div></div>
 <p style="margin-top: 0.1rem;">
 These dates specify the dates to which the data corresponds to, i.e. change is calculated using the difference of the 
 values between the two dates and total corresponds to the latest date.
@@ -37,27 +37,27 @@ ___
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="highlight-hover">
                 <td class="index">Cases</td>
                 <td id = "tot_confirmed_td" class="bold">   ...   </td>
                 <td id = "change_confirmed_td" class="bold">   ...   </td>
             </tr>
-            <tr>
+            <tr class="highlight-hover">
                 <td class="index">Active Cases</td>
                 <td id = "tot_active_td" class="bold">   ...   </td>
                 <td id = "change_active_td" class="bold">   ...   </td>
             </tr>
-            <tr>
+            <tr class="highlight-hover">
                 <td class="index">Tests</td>
                 <td id = "tot_tests_td" class="bold">   ...   </td>
                 <td id = "change_tests_td" class="bold">   ...   </td>
             </tr>
-            <tr>
+            <tr class="highlight-hover">
                 <td class="index">Recoveries</td>
                 <td id = "tot_recoveries_td" class="bold">   ...   </td>
                 <td id = "change_recoveries_td" class="bold">   ...   </td>
             </tr>
-            <tr>
+            <tr class="highlight-hover">
                 <td class="index">Deaths</td>
                 <td id = "tot_deaths_td" class="bold">   ...   </td>
                 <td id = "change_deaths_td" class="bold">   ...   </td>

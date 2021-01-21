@@ -191,7 +191,7 @@ iframe {
   }
 }
 
-.pieChart{
+.pie-chart{
   height:400px;
 
   @include small { // Phone
@@ -480,6 +480,10 @@ iframe {
     .bold {
       font-weight: bold;
     }
+
+    .highlight-hover:hover {
+      background-color: $hr-border-color;
+    }
   }
 
   dl {
@@ -539,7 +543,7 @@ iframe {
   margin-right:auto;
 }
 
-.gradient-cell {
+.date-cell {
   display: inline-block;
   background: $header-bg-color;
   opacity: 80%;

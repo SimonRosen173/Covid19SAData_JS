@@ -11,127 +11,144 @@ last_updated: 10:56 03 September 2020
 # Summary
 ___
 
-<!--
-**Note: Click on an underlined province name to be taken to a page specific to that province.**
--->
-
-<!--
 <table>
 <thead>
 	<tr class="header">
 		<th>Province</th>
 		<th>Cases</th>
-		<th>New Cases</th>
+		<th>Cases <br> Change</th>
 		<th>Recoveries</th>
-		<th>New Recoveries</th>
+		<th>Recoveries <br> Change</th>
 		<th>Deaths</th>
-		<th>New Deaths</th>
+		<th>Deaths <br> Change</th>
+        <th>Active</th>
+		<th>Active <br> Change</th>
 	</tr>
 </thead>
 <tbody>
-	<tr>
-		<td class="index" markdown="span">Eastern Cape</td>
-		<td  markdown="span">86 322</td>
-		<td  markdown="span">+105</td>
-		<td  markdown="span">82 233</td>
-		<td  markdown="span">+0</td>
-		<td  markdown="span">2 932</td>
-		<td  markdown="span">+29</td>
+	<tr class="highlight-hover">
+		<td class="index">Eastern Cape</td>
+        <td id = "tot_confirmed_ec_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_ec_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_ec_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_ec_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_ec_td" class="bold">   ...   </td>
+        <td id = "change_deaths_ec_td" class="bold">   ...   </td>
+        <td id = "tot_active_ec_td" class="bold">   ...   </td>
+        <td id = "change_active_ec_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">Free State</td>
-		<td  markdown="span">38 473</td>
-		<td  markdown="span">+348</td>
-		<td  markdown="span">25 999</td>
-		<td  markdown="span">+1 535</td>
-		<td  markdown="span">731</td>
-		<td  markdown="span">+15</td>
+	<tr class="highlight-hover">
+		<td class="index">Free State</td>
+        <td id = "tot_confirmed_fs_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_fs_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_fs_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_fs_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_fs_td" class="bold">   ...   </td>
+        <td id = "change_deaths_fs_td" class="bold">   ...   </td>
+        <td id = "tot_active_fs_td" class="bold">   ...   </td>
+        <td id = "change_active_fs_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span"><a href = "gauteng" >Gauteng</a></td>
-		<td  markdown="span">211 157</td>
-		<td  markdown="span">+639</td>
-		<td  markdown="span">184 274</td>
-		<td  markdown="span">+485</td>
-		<td  markdown="span">3 680</td>
-		<td  markdown="span">+49</td>
+	<tr class="highlight-hover">
+		<td class="index">Gauteng</td>
+        <td id = "tot_confirmed_gp_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_gp_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_gp_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_gp_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_gp_td" class="bold">   ...   </td>
+        <td id = "change_deaths_gp_td" class="bold">   ...   </td>
+        <td id = "tot_active_gp_td" class="bold">   ...   </td>
+        <td id = "change_active_gp_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">KwaZulu-Natal</td>
-		<td  markdown="span">113 661</td>
-		<td  markdown="span">+424</td>
-		<td  markdown="span">100 605</td>
-		<td  markdown="span">+221</td>
-		<td  markdown="span">2 164</td>
-		<td  markdown="span">+12</td>
+	<tr class="highlight-hover">
+		<td class="index">KwaZulu-Natal</td>
+        <td id = "tot_confirmed_kzn_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_kzn_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_kzn_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_kzn_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_kzn_td" class="bold">   ...   </td>
+        <td id = "change_deaths_kzn_td" class="bold">   ...   </td>
+        <td id = "tot_active_kzn_td" class="bold">   ...   </td>
+        <td id = "change_active_kzn_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">Limpopo</td>
-		<td  markdown="span">13 400</td>
-		<td  markdown="span">+99</td>
-		<td  markdown="span">12 486</td>
-		<td  markdown="span">+0</td>
-		<td  markdown="span">202</td>
-		<td  markdown="span">+0</td>
+	<tr class="highlight-hover">
+		<td class="index">Limpopo</td>
+        <td id = "tot_confirmed_lp_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_lp_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_lp_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_lp_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_lp_td" class="bold">   ...   </td>
+        <td id = "change_deaths_lp_td" class="bold">   ...   </td>
+        <td id = "tot_active_lp_td" class="bold">   ...   </td>
+        <td id = "change_active_lp_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">Mpumalanga</td>
-		<td  markdown="span">24 605</td>
-		<td  markdown="span">+135</td>
-		<td  markdown="span">23 004</td>
-		<td  markdown="span">+65</td>
-		<td  markdown="span">351</td>
-		<td  markdown="span">+0</td>
+	<tr class="highlight-hover">
+		<td class="index">Mpumalanga</td>
+        <td id = "tot_confirmed_mp_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_mp_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_mp_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_mp_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_mp_td" class="bold">   ...   </td>
+        <td id = "change_deaths_mp_td" class="bold">   ...   </td>
+        <td id = "tot_active_mp_td" class="bold">   ...   </td>
+        <td id = "change_active_mp_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">Northern Cape</td>
-		<td  markdown="span">11 020</td>
-		<td  markdown="span">+183</td>
-		<td  markdown="span">7 420</td>
-		<td  markdown="span">+245</td>
-		<td  markdown="span">134</td>
-		<td  markdown="span">+5</td>
+	<tr class="highlight-hover">
+		<td class="index">Northern Cape</td>
+        <td id = "tot_confirmed_nc_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_nc_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_nc_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_nc_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_nc_td" class="bold">   ...   </td>
+        <td id = "change_deaths_nc_td" class="bold">   ...   </td>
+        <td id = "tot_active_nc_td" class="bold">   ...   </td>
+        <td id = "change_active_nc_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">North West</td>
-		<td  markdown="span">25 604</td>
-		<td  markdown="span">+214</td>
-		<td  markdown="span">19 388</td>
-		<td  markdown="span">+502</td>
-		<td  markdown="span">266</td>
-		<td  markdown="span">+0</td>
+	<tr class="highlight-hover">
+		<td class="index">North West</td>
+        <td id = "tot_confirmed_nw_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_nw_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_nw_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_nw_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_nw_td" class="bold">   ...   </td>
+        <td id = "change_deaths_nw_td" class="bold">   ...   </td>
+        <td id = "tot_active_nw_td" class="bold">   ...   </td>
+        <td id = "change_active_nw_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">Western Cape</td>
-		<td  markdown="span">106 353</td>
-		<td  markdown="span">+239</td>
-		<td  markdown="span">98 047</td>
-		<td  markdown="span">+410</td>
-		<td  markdown="span">3 929</td>
-		<td  markdown="span">+16</td>
+	<tr class="highlight-hover">
+		<td class="index">Western Cape</td>
+        <td id = "tot_confirmed_wc_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_wc_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_wc_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_wc_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_wc_td" class="bold">   ...   </td>
+        <td id = "change_deaths_wc_td" class="bold">   ...   </td>
+        <td id = "tot_active_wc_td" class="bold">   ...   </td>
+        <td id = "change_active_wc_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index" markdown="span">Unknown</td>
-		<td  markdown="span">0</td>
-		<td  markdown="span">-50</td>
-		<td  markdown="span">0</td>
-		<td  markdown="span">+0</td>
-		<td  markdown="span">0</td>
-		<td  markdown="span">+0</td>
+	<tr class="highlight-hover">
+		<td class="index">Unknown</td>
+        <td id = "tot_confirmed_unk_td" class="bold">   ...   </td>
+        <td id = "change_confirmed_unk_td" class="bold">   ...   </td>
+        <td id = "tot_recoveries_unk_td" class="bold">   ...   </td>
+        <td id = "change_recoveries_unk_td" class="bold">   ...   </td>
+        <td id = "tot_deaths_unk_td" class="bold">   ...   </td>
+        <td id = "change_deaths_unk_td" class="bold">   ...   </td>
+        <td id = "tot_active_unk_td" class="bold">   ...   </td>
+        <td id = "change_active_unk_td" class="bold">   ...   </td>
 	</tr>
-	<tr>
-		<td class="index total" markdown="span">Total</td>
-		<td class="total" markdown="span">630 595</td>
-		<td class="total" markdown="span">+2 336</td>
-		<td class="total" markdown="span">553 456</td>
-		<td class="total" markdown="span">+3 463</td>
-		<td class="total" markdown="span">14 389</td>
-		<td class="total" markdown="span">+126</td>
+	<tr class="highlight-hover">
+		<td class="index total">Total</td>
+        <td id = "tot_confirmed_sa_td" class="bold total">   ...   </td>
+        <td id = "change_confirmed_sa_td" class="bold total">   ...   </td>
+        <td id = "tot_recoveries_sa_td" class="bold total">   ...   </td>
+        <td id = "change_recoveries_sa_td" class="bold total">   ...   </td>
+        <td id = "tot_deaths_sa_td" class="bold total">   ...   </td>
+        <td id = "change_deaths_sa_td" class="bold total">   ...   </td>
+        <td id = "tot_active_sa_td" class="bold total">   ...   </td>
+        <td id = "change_active_sa_td" class="bold total">   ...   </td>
 	</tr>
 </tbody>
-</table> -->
-Negative values in the "New" columns indicate that the total of that value for the specified province went down from the previous
-day. This is due to the numbers being adjusted by government and moved to the totals of other provinces or mistakes in the reporting by government.
+</table>
 
 # Total & Latest Change in Cases
 
@@ -139,20 +156,13 @@ ___
 
 ### Total Cases Per Province
 
-<div class = "" id = "totCasesPerProvPieChartDiv"></div>
-
-<!--<div class="iframeDiv" align="center">
-    <iframe class="lazy pieChart" data-src="tot_cases_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>-->
+<div class = "pie-chart" id = "totCasesPerProvPieChartDiv"></div>
 
 ### Latest Change in Cases Per Province
-<!--<div class="iframeDiv" align="center">
-    <iframe class="lazy pieChart" data-src="latest_change_cases_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>-->
 
-<div class = "" id = "latestChangeCasesPerProvPieChartDiv"></div>
+<div class = "pie-chart" id = "changeCasesPerProvPieChartDiv"></div>
 
-# Total Tests
+<!--# Total Tests
 ___
 
 ### Total Tests Per Province
@@ -160,34 +170,26 @@ ___
     <iframe class="lazy pieChart" data-src="tot_tests_per_province.html" scrolling="no" frameborder="0"></iframe>
 </div>
 Tests per province data is for **28 May 2020**. This is when the data was last released.
+-->
 
 # Total & Latest Change in Recoveries
 
 ___
 
 ### Total Recoveries Per Province
-<div class="iframeDiv" align="center">
-    <iframe class="lazy pieChart" data-src="tot_recovered_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>
-<!--
-### Latest Change in Recoveries Per Province
-<div class="iframeDiv" align="center">
-    <iframe class="lazy pieChart" data-src="tot_recovered_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>
--->
+<div class = "pie-chart" id = "totRecoveriesPerProvPieChartDiv"></div>
 
-# Total & Latest Change in Deaths & Recoveries
+### Latest Change in Recoveries Per Province
+<div class = "pie-chart" id = "changeRecoveriesPerProvPieChartDiv"></div>
+
+# Total & Latest Change in Deaths
 ___
 
 ### Total Deaths Per Province
-<div class="iframeDiv" align="center">
-    <iframe class="lazy pieChart" data-src="tot_deaths_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>
+<div class = "pie-chart" id = "totDeathsPerProvPieChartDiv"></div>
 
 ### Latest Change in Deaths Per Province
-<div class="iframeDiv" align="center">
-    <iframe class="lazy pieChart" data-src="latest_change_deaths_per_province.html" scrolling="no" frameborder="0"></iframe>
-</div>
+<div class = "pie-chart" id = "changeDeathsPerProvPieChartDiv"></div>
 
 # Cases Over Time
 ___
