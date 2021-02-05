@@ -26,6 +26,7 @@ values between the two dates and total corresponds to the latest date.
 ___
 
 <!--| | Total | Change | Interval of Change | Sources | -->
+<!--Commit to test GitHub pages deploy-->
 
 <div>
     <table class = "centred">
