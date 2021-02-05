@@ -87,6 +87,8 @@ ___
 
 # Testing & Cases Over Time
 ___
+
+Mobile users, please note that these graphs are best viewed in landscape mode.
 ## Cumulative
 ### Date vs Cumulative No of Tests & Positive Cases 
 <div class = "line-graph" id = "cumCasesTestsLineGraphDiv"></div>
