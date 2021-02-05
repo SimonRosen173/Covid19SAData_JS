@@ -1,5 +1,5 @@
 var data_base_url = 'https://raw.githubusercontent.com/SimonRosen173/Covid19SAData_Data/master/data/';
-let is_display_mode_bar, is_range_editable;
+let is_display_mode_bar, is_range_editable, drag_mode;
 
 // Butchering JS but meh... JS is just the product of some insane developer's fever dream
 
@@ -20,10 +20,12 @@ function setInteractivity(interactive_lvl){
         case "high":
             is_display_mode_bar = true;
             is_range_editable = true;
+            drag_mode = 'zoom';
             break;
         case "med":
             is_display_mode_bar = false;
             is_range_editable = false;
+            drag_mode= false;
             break;
         case "low":
             break;
@@ -269,6 +271,7 @@ function makeLineChart(
             r: 65,
         },
         plot_bgcolor:"#E5ECF6",
+        dragmode:drag_mode
     };
 
     var config = {
