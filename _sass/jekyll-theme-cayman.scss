@@ -558,3 +558,7 @@ iframe {
 .inline-div {
   display: inline-block;
 }
+
+rect {
+  -webkit-tap-highlight-color: transparent;
+}
