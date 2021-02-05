@@ -1,6 +1,34 @@
 var data_base_url = 'https://raw.githubusercontent.com/SimonRosen173/Covid19SAData_Data/master/data/';
+let is_display_mode_bar, is_range_editable;
 
 // Butchering JS but meh... JS is just the product of some insane developer's fever dream
+
+function initConfigs(){
+    setInteractivity('med');
+    // is_display_mode_bar = true;
+    // is_range_editable = true;
+}
+
+// NOTE: This will only change variables not reload graphs
+// high - show display mode bar
+//      - edit range
+// med - hide display mode bar
+//     - cannot edit range
+// low - static graph
+function setInteractivity(interactive_lvl){
+    switch(interactive_lvl){
+        case "high":
+            is_display_mode_bar = true;
+            is_range_editable = true;
+            break;
+        case "med":
+            is_display_mode_bar = false;
+            is_range_editable = false;
+            break;
+        case "low":
+            break;
+    }
+}
 
 // index_data = {index_name: []}
 // data = {col1_name: [], col2_name: [], ...}
@@ -220,23 +248,20 @@ function makeLineChart(
             title: {
                 text: xaxis_title,
             },
-            // fixedrange: true,
             gridcolor: 'white',
-            zerolinecolor: 'white'
-
+            zerolinecolor: 'white',
+            fixedrange: !is_range_editable
         },
         yaxis: {
             title: {
                 text: yaxis_title
             },
-            // fixedrange: true,
             gridcolor: 'white',
-            zerolinecolor: 'white'
+            zerolinecolor: 'white',
+            fixedrange: !is_range_editable
         },
         showlegend: true,
         legend: {x: 0.01, y: 0.98, title: {text: ""}},
-        // xaxis: {fixedrange: true},
-        // yaxis: {fixedrange: true},
         margin: {
             t: 30,
             b: 40,
@@ -247,7 +272,7 @@ function makeLineChart(
     };
 
     var config = {
-        // displayModeBar: false,
+        displayModeBar: is_display_mode_bar,
         responsive: true
     };
 
@@ -259,6 +284,7 @@ function makeGroupLineChart(){
 
 }
 
+initConfigs();
 // Provinces PieCharts
 // function createProvPieCharts(){
 //     // Cases per prov

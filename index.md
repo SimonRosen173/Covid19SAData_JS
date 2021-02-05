@@ -76,6 +76,14 @@ ___
 <input type="radio" id="rol_avg_7_rb" name="daily_data_type" value="rol_avg_7" onchange="dailyDataTypeRBChanged(this);">
 <label for="rol_avg_7_rb">7 day rolling average</label>
 
+#### Graph Interactivity
+<input type="radio" id="interactivity_high_rb" name="interactivity" value="high" onchange="graphInteractivityRBChanged(this);">
+<label for="interactivity_high_rb">Advanced</label><br>
+<input type="radio" id="interactivity_med_rb" name="interactivity" value="med" onchange="graphInteractivityRBChanged(this);" checked='true'>
+<label for="interactivity_med_rb">Default</label><br>
+<!--<input type="radio" id="rol_avg_7_rb" name="daily_data_type" value="rol_avg_7" onchange="dailyDataTypeRBChanged(this);">
+<label for="rol_avg_7_rb">None</label>-->
+
 # Testing & Cases Over Time
 ___
 ## Cumulative

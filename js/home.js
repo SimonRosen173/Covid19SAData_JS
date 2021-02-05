@@ -235,6 +235,17 @@ function dailyDataTypeRBChanged(el){
     // console.log(data_type);
 }
 
+function graphInteractivityRBChanged(el){
+    changeGraphInteractivity(el.value);
+}
+
+function changeGraphInteractivity(interactivity_lvl){
+    setInteractivity(interactivity_lvl);
+
+    makeAllCumDataLineCharts(all_cum_data);
+    makeAllDailyDataLineCharts(all_daily_data, "default");
+}
+
 window.onload = function (){
     // Needs to be done while using GitHub pages base url
     if (window.location.hostname === "simonrosen173.github.io"){
