@@ -1,6 +1,7 @@
-# New Features
+<!--# New Features
 ### Gauteng Page
 Click [here](/provinces/gauteng) to be taken to a page for Gauteng specific Covid-19 data & visualisations. 
+-->
 
 # Further Info
 ### N.B. Contact Info

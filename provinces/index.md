@@ -191,6 +191,7 @@ ___
 ### Latest Change in Deaths Per Province
 <div class = "pie-chart" id = "changeDeathsPerProvPieChartDiv"></div>
 
+<!--
 # Cases Over Time
 ___
 Note: You can click on provinces in the legend to hide or show them on the graph.
@@ -296,6 +297,7 @@ ___
 	</tr>
 </tbody>
 </table>
+-->
 
 {% include_relative _includes/footer.md %}
 
