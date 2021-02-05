@@ -17,7 +17,7 @@ These charts are all interactive. Mouse over an aspect of the chart to see more 
 **Note: Breaks in histograms are as a result of data not being available for those days.**
 
 # Summary
-<div><div id="summary_tbl_interval" class = "date-cell">... - ...</div></div>
+<div><div id="summary_tbl_interval" class = "date-cell">Loading...</div></div>
 <p style="margin-top: 0.1rem;">
 These dates specify the dates to which the data corresponds to, i.e. change is calculated using the difference of the 
 values between the two dates and total corresponds to the latest date.
